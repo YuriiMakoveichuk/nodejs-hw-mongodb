@@ -58,10 +58,10 @@ export const updateContact = async (contactId, payload, userId) => {
   const contact = await ContactsCollection.findOneAndUpdate(
     {
       _id: contactId,
+      userId,
     },
     payload,
     { new: true },
-    userId,
   );
   return contact;
 };
