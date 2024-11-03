@@ -63,6 +63,7 @@ export const updateContact = async (contactId, payload, userId) => {
     payload,
     { new: true },
   );
+
   return contact;
 };
 
