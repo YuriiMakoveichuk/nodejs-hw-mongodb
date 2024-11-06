@@ -9,7 +9,7 @@ import {
   SMTP,
   TEMPLATES_DIR,
   THIRTY_DAYS,
-} from '../contacts/index.js';
+} from '../constants/index.js';
 import { randomBytes } from 'crypto';
 
 import jwt from 'jsonwebtoken';

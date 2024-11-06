@@ -1,4 +1,4 @@
-import { THIRTY_DAYS } from '../contacts/index.js';
+import { THIRTY_DAYS } from '../constants/index.js';
 import {
   logoutUser,
   refreshUsersSession,
