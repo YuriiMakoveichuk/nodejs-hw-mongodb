@@ -13,7 +13,7 @@ tags:
     description: Auth operation.
 servers:
   - url: http://localhost:3000
-  - url: https://example.com/api/v1
+  - url: https://nodejs-hw-mongodb-5-kxqa.onrender.com
 paths:
   /contacts:
     get:
@@ -27,6 +27,24 @@ paths:
       $ref: ../swagger/path/contacts/{id}/patch.yaml
     delete:
       $ref: ../swagger/path/contacts/{id}/delete.yaml
+  /register:
+    post:
+      $ref: ../swagger/path/auth/register.yaml
+  /login:
+    post:
+      $ref: ../swagger/path/auth/login.yaml
+  /logout:
+    post:
+      $ref: ../swagger/path/auth/logout.yaml
+  /refresh:
+    post:
+      $ref: ../swagger/path/auth/refresh.yaml
+  /request-reset-email:
+    post:
+      $ref: ../swagger/path/auth/registerUserPassword.yaml
+  /reset-pwd:
+    post:
+      $ref: ../swagger/path/auth/resetPassword.yaml
 components:
   securitySchemes:
     bearerAuth:

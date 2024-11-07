@@ -1,0 +1,49 @@
+tags:
+  - Auth
+summary: Login a user
+operationId: loginUser
+description: 'User login payload'
+security:
+  - bearerAuth: []
+requestBody:
+  content:
+    multipart/form-data:
+      schema:
+        type: object
+        required:
+          - email
+          - password
+        properties:
+          email:
+            description: "user's email"
+            type: string
+            example: 'hello@gmail.con'
+          password:
+            description: 'Password for registration user'
+            type: string
+            example: 123456789u
+responses:
+  '201':
+    description: 'Created a user'
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - status
+            - message
+            - data
+          properties:
+            status:
+              type: integer
+              example: 201
+            message:
+              type: string
+              example: Successfully logged in an user!
+            data:
+              type: object
+              $ref: ../../components/schemas/auth/login.yaml
+  '401':
+    $ref: '../../components/responses/401.yaml'
+  '404':
+    $ref: '../../components/responses/404.yaml'

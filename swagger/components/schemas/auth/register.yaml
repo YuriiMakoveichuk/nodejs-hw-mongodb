@@ -1,0 +1,18 @@
+type: object
+required:
+  - _id
+  - name
+  - email
+properties:
+  _id:
+    description: "user's id"
+    type: string
+    example: 67209d646bea0ae7c797e7be
+  name:
+    description: "User's name"
+    type: string
+    example: 'NEW USER2'
+  email:
+    description: "User's email"
+    type: string
+    example: newuser4@gmail.com

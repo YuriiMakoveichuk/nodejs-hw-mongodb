@@ -1,0 +1,8 @@
+type: object
+required:
+  - accessToken
+properties:
+  accessToken:
+    description: 'To access an API'
+    type: string
+    example: 0LA/EaFESTJovOkrVEiFvIkgF1QtsgZ8Vo+k/1Kk
