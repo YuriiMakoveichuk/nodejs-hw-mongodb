@@ -23,6 +23,10 @@ paths:
   /contacts/{id}:
     get:
       $ref: ../swagger/path/contacts/{id}/get.yaml
+    patch:
+      $ref: ../swagger/path/contacts/{id}/patch.yaml
+    delete:
+      $ref: ../swagger/path/contacts/{id}/delete.yaml
 components:
   securitySchemes:
     bearerAuth:
