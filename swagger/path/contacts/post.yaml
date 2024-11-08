@@ -35,16 +35,12 @@ requestBody:
             description: 'contacts type'
             type: string
             enum: ['work', 'home', 'personal']
-          userId:
-            description: "contact's user id"
-            type: string
-            example: 67209d646bea0ae7c797e7be
           photo:
             description: "Contact's photo"
             type: string
             format: binary
 responses:
-  '210':
+  '201':
     description: 'Create a contact'
     content:
       application/json:
@@ -57,7 +53,7 @@ responses:
           properties:
             status:
               type: integer
-              example: 210
+              example: 201
             message:
               type: string
               example: Successfully created a contact!

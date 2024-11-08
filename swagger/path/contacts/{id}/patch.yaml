@@ -12,6 +12,36 @@ parameters:
     schema:
       type: string
       example: '66fd28c5e4b716dbc3cfac15'
+requestBody:
+  content:
+    multipart/form-data:
+      schema:
+        type: object
+        properties:
+          name:
+            description: "Contact's name"
+            type: string
+            example: 'MISTER FIRST'
+          phoneNumber:
+            description: "contact's phone number"
+            type: string
+            example: '+380000001111'
+          email:
+            description: "contact's email"
+            type: string
+            example: 'hello@gmail.con'
+          isFavourite:
+            description: 'is the contact favourite'
+            type: boolean
+            example: false
+          contactType:
+            description: 'contacts type'
+            type: string
+            enum: ['work', 'home', 'personal']
+          photo:
+            description: "Contact's photo"
+            type: string
+            format: binary
 responses:
   '200':
     description: 'Patch contact by id'
