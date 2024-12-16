@@ -1,0 +1,33 @@
+type: object
+required:
+  - _id
+  - userId
+  - accessToken
+  - refreshToken
+  - accessTokenValidUntil
+  - refreshTokenValidUntil
+properties:
+  _id:
+    description: 'Session id'
+    type: string
+    example: 671fad84f4d3a5b7695227ef
+  userId:
+    description: "User's id"
+    type: string
+    example: 67209d646bea0ae7c797e7be
+  accessToken:
+    description: 'To access an API'
+    type: string
+    example: 8Fsq9i8WTAAsBoxb+vc2JgXiii1QZtJRIMF32pUa
+  refreshToken:
+    description: 'To obtain new access tokens'
+    type: string
+    example: pjXuIN95pcXjgfLoxjgrXtxLl8EcDyQFkLHD3t6B
+  accessTokenValidUntil:
+    description: 'Token validity period'
+    type: string
+    example: '2024-10-28T15:43:04.358+00:00'
+  refreshTokenValidUntil:
+    description: 'New token validity period'
+    type: string
+    example: '2024-11-27T15:28:04.358+00:00'

@@ -1,0 +1,29 @@
+tags:
+  - Auth
+summary: Logout a user
+operationId: logoutUser
+description: 'Session id payload'
+security:
+  - bearerAuth: []
+requestBody:
+  content:
+    multipart/form-data:
+      schema:
+        type: object
+        required:
+          - email
+          - password
+        properties:
+          email:
+            description: "user's email"
+            type: string
+            example: 'hello@gmail.con'
+          password:
+            description: 'Password for registration user'
+            type: string
+            example: 123456789u
+responses:
+  '204':
+    description: 'No Content'
+  '401':
+    $ref: '../../components/responses/401.yaml'
